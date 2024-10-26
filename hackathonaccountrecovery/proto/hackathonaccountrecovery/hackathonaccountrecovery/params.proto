@@ -1,0 +1,15 @@
+syntax = "proto3";
+package hackathonaccountrecovery.hackathonaccountrecovery;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "hackathonaccountrecovery/x/hackathonaccountrecovery/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "hackathonaccountrecovery/x/hackathonaccountrecovery/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

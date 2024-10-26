@@ -1,0 +1,30 @@
+syntax = "proto3";
+package hackathonaccountrecovery.hackathonaccountrecovery;
+
+option go_package = "hackathonaccountrecovery/x/hackathonaccountrecovery/types";
+import "gogoproto/gogo.proto";
+// Define the key-value pair
+message RecoveryAddresses {
+  string address = 1;
+  string sharekey = 2;
+}
+
+
+
+
+message Account {
+  
+  string owner = 1; 
+  uint64 totalshares = 2; 
+  uint64 minshares = 3; 
+  string creator = 4; 
+  string createddate = 5; 
+  string lastmodifieddate = 6; 
+  string deathDate = 7; 
+  bool validated = 8; 
+  uint64 id = 9;
+  bool activated = 11; 
+  string emailId = 12;
+  bool sentKey = 13;
+  repeated RecoveryAddresses MultiSign = 10 [(gogoproto.nullable) = false];  // Collecti
+}

@@ -1,0 +1,34 @@
+version: 1
+validation: sovereign
+accounts: 
+- name: alice
+  coins:
+  - 20000token
+  - 200000000stake
+
+- name: bob
+  coins:
+  - 10000token
+  - 100000000stake
+- name: frank
+  coins: [10000token, 100000000stake]
+  mnemonic: struggle since inmate safe logic kite tag web win stay security wonder
+- name: Dave
+  coins: [10000token, 100000000stake]
+  mnemonic: mask grab pass attract expire gauge often ritual basic control pencil turkey
+- name: Chris
+  coins: [10000token, 100000000stake]
+  mnemonic: slide weird cart advance supreme mass laugh spring scene cheap leave over
+
+
+client:
+  openapi:
+    path: docs/static/openapi.yml
+faucet:
+  name: bob
+  coins:
+  - 5token
+  - 100000stake
+validators:
+- name: alice
+  bonded: 100000000stake
