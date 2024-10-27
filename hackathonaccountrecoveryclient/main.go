@@ -398,7 +398,7 @@ func restoreSharekeyHandler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 	print(addr)
-	/*Id, _ := strconv.ParseUint(recoveryAccount.Id, 10, 64)
+	Id, _ := strconv.ParseUint(recoveryAccount.Id, 10, 64)
 
 	ValidateMsg := &types.MsgUpdateMultisite{
 		Creator:           addr,
@@ -412,7 +412,7 @@ func restoreSharekeyHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Print(txResp)*/
+	fmt.Print(txResp)
 
 	queryClient := types.NewQueryClient(client.Context())
 	queryResp, err := queryClient.GetSecretKey(ctx, &types.QueryGetSecretKeyRequest{AccountOwner: recoveryAccount.OwnerAddress})
